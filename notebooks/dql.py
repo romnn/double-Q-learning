@@ -37,7 +37,7 @@ def q_learning(
                     R=R
                 )
             
-            Q[state, action] += alpha * (
+            Q[state][action] += alpha * (
                 reward + discount_factor * np.max(Q[new_state][env.legal_actions(new_state)]) - Q[state][action]
             )
             
@@ -85,11 +85,11 @@ def double_q_learning(
                 )
             
             if np.random.uniform() <= 0.5:
-                Q1[state, action] += alpha * (
+                Q1[state][action] += alpha * (
                     reward + discount_factor * Q2[new_state][np.argmax(Q1[new_state][env.legal_actions(new_state)])] - Q1[state][action]
                 )
             else:
-                Q2[state, action] += alpha * (
+                Q2[state][action] += alpha * (
                     reward + discount_factor * Q1[new_state][np.argmax(Q2[new_state][env.legal_actions(new_state)])] - Q2[state][action]
                 )
             
