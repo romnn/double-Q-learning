@@ -1,0 +1,1 @@
+{"environment": "FrozenLake-v1", "optimizer": "double_q_learning", "num_episodes": 5000, "repetitions": 10, "best_alpha": 0.1}
