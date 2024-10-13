@@ -1,1 +1,0 @@
-{"environment": "Taxi-v3", "optimizer": "q_learning", "num_episodes": 500, "repetitions": 10, "best_alpha": 0.25}
